@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+header {
+    background-image: url("background.png");
+}
+
+.header-top {
+    padding: 10px;
+}
+
+.logo {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.search-form {
+    display: inline-block;
+    padding-right: 50px;
+    width: calc(100% - 184px);
+    max-width: 600px;
+}
+
+.search-form > * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.search-form label {
+    width: calc(100% - 120px);
+}
+
+.search-form label span {
+    display: none;
+}
+
+.search-form label input {
+    height: 40px;
+    border: none;
+    width: 100%;
+    border-radius: 25px 0 0 25px;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.search-form label input::placeholder {
+    font-style: italic;
+}
+
+.search-form label input:focus {
+    outline: none;
+    box-shadow: 1px 0 5px 2px #ffffff;
+}
+
+.search-form button {
+    background: #EACABA;
+    border: none;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    transition: background-color ease 500ms;
+}
+
+.search-form button:hover {
+    background-color: #eacaba;
+}
+
+.search-form button img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+header nav {
+    background: #EACABA;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+header nav ul li a, .inner-menu > li label {
+    padding: 10px 15px;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.inner-menu, .inner-side-menu {
+    display: none;
+    background-color: antiquewhite;
+}
+
+header nav > ul > li:hover .inner-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.inner-menu > li {
+    position: relative;
+}
+
+.inner-menu > li > input {
+    width: 0;
+    height: 0;
+    position: fixed;
+    left: 100%;
+}
+
+.inner-menu > li input:hover .inner-side-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+#google-maps:checked:before {
+    content: '';
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
